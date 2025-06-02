@@ -16,13 +16,14 @@ import asyncio
 
 import logfire
 
-from pydantic_ai_mcp_experiment.agents import get_agents, get_stdio_mcp_server
+from pydantic_ai_mcp_experiment.agents import get_agents
+from pydantic_ai_mcp_experiment.servers import get_stdio_mcp_server
 
 logfire.configure()
 logfire.instrument_pydantic_ai()
 
 server = get_stdio_mcp_server()
-city_agent, music_agent = get_agents([server])
+city_agent, music_agent = get_agents("qwen3:32b", [server])
 
 
 async def main():

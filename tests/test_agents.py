@@ -10,7 +10,7 @@ from pydantic_ai.models.test import TestModel
 from pydantic_ai_mcp_experiment.agents import get_agents
 from pydantic_ai_mcp_experiment.data import CityLocation
 
-city_agent, music_agent = get_agents([])
+city_agent, music_agent = get_agents("qwen3:32b", [])
 
 # -------------------
 # Fixtures

@@ -2,10 +2,10 @@ from typing import Literal
 
 from mcp.server.fastmcp import FastMCP
 
-server = FastMCP("Best City Server")
+mcp = FastMCP("Stdio MCP Server")
 
 
-@server.tool()
+@mcp.tool()
 async def get_best_city() -> str:
     """Source for the best city"""
     return "Berlin, Germany"
@@ -14,7 +14,7 @@ async def get_best_city() -> str:
 Musicals = Literal["book of mormon", "cabaret"]
 
 
-@server.tool()
+@mcp.tool()
 async def get_musical_greeting(musical: Musicals) -> str:
     """Source for a musical greeting"""
     match musical:
@@ -27,4 +27,4 @@ async def get_musical_greeting(musical: Musicals) -> str:
 
 
 if __name__ == "__main__":
-    server.run()
+    mcp.run()
