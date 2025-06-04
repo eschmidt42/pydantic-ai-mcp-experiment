@@ -1,4 +1,4 @@
-"""mcp.run version of the MCP server.
+"""mcp.run HTTP version of the MCP server.
 
 Run using
 

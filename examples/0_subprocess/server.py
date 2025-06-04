@@ -1,3 +1,10 @@
+"""mcp.run Stdio version of the MCP server.
+
+Run using
+
+    python server.py
+"""
+
 from typing import Literal
 
 from mcp.server.fastmcp import FastMCP
