@@ -12,5 +12,4 @@ wheels/
 # Other
 .envrc
 .logfire
-.vscode/settings.json
 .vscode
